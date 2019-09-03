@@ -1,5 +1,5 @@
 use ligen::ligen;
-use ligen_core::{Object, Method, Type, Output, Inputs, Input, Files, File};
+use ligen_core::{Object, Method, Files, File};
 
 pub struct Generator {
     c_generator : ligen_c::Generator
