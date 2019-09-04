@@ -1,1 +1,3 @@
-{object}::{object}({parameters}) : self({object}_{method}({args})) {{}}
+{object}::{object}({parameters}) {{
+  this->self = {object}_{method}({args}).self;
+}}

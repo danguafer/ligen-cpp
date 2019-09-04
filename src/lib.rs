@@ -47,9 +47,9 @@ impl Generator {
             args
         } else {
             if args.len() > 0 {
-                format!("self, {}", args)
+                format!("*this, {}", args)
             } else {
-                format!("self")
+                format!("*this")
             }
         };
 

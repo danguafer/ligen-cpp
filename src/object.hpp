@@ -1,11 +1,11 @@
 #pragma once
 
+#include <RustObject.h>
+
 #include <cstdint>
 
-class {object} {{
+class {object} : public RustObject {{
   public:
     ~{object}();
     {methods}
-
-    void* self;
 }};

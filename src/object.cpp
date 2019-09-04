@@ -2,7 +2,7 @@
 #include "{object}.h"
 
 {object}::~{object}() {{
-  {object}_destroy(self);
+  {object}_destroy(*this);
 }}
 
 {methods}
