@@ -15,6 +15,13 @@ impl Type {
             modifier
         }
     }
+
+    pub fn is_atomic(&self) -> bool {
+        match self.identifier.name.as_str() {
+            "bool" | "uint8_t" | "uint16_t" | "uint32_t" | "uint64_t" | "int8_t" | "int16_t" | "int32_t" | "int64_t" | "char" | "unsigned char" | "short" | "unsigned short" | "int" | "unsigned int" | "long" | "unsigned long" | "float" | "double" => true,
+            _ => false
+        }
+    }
 }
 
 impl fmt::Display for Type {

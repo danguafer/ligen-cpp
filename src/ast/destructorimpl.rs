@@ -15,6 +15,6 @@ impl DestructorImpl {
 
 impl fmt::Display for DestructorImpl {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{class_id}::~{class_id}() {{ {class_id}_destroy(*this); }}", class_id = self.identifier)
+        write!(f, "{class_id}::~{class_id}() {{ if (this->self) {class_id}_destroy(*this); }}", class_id = self.identifier)
     }
 }
